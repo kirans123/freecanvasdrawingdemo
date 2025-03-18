@@ -1,4 +1,4 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
+// import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:go_router/go_router.dart';
 
 import 'route_path.dart';
@@ -10,8 +10,8 @@ final routerConfig = GoRouter(
   errorBuilder: (c, s) => ErrorRoute(error: s.error!).build(c, s),
   observers: [
     // logger.setRouteObserver(),
-    FirebaseAnalyticsObserver(
-      analytics: FirebaseAnalytics.instance,
-    ),
+    // FirebaseAnalyticsObserver(
+    //   analytics: FirebaseAnalytics.instance,
+    // ),
   ],
 );

@@ -1,5 +1,5 @@
 // coverage:ignore-file
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+// import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
@@ -21,16 +21,16 @@ class ErrorHandlerServiceImpl implements ErrorHandlerService {
         'ErrorHandlerService[${error.runtimeType}][$context] $errorTitle $error $stackTrace ');
 
     if (!kIsWeb) {
-      FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
-      FirebaseCrashlytics.instance.recordError(error, stackTrace);
+      // FirebaseCrashlytics.instance.setCrashlyticsCollectionEnabled(true);
+      // FirebaseCrashlytics.instance.recordError(error, stackTrace);
       FlutterError.onError = (errorDetails) {
-        FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
+        // FirebaseCrashlytics.instance.recordFlutterFatalError(errorDetails);
       };
       // Pass all uncaught asynchronous errors that aren't
       //handled by the Flutter
       //framework to Crashlytics
       PlatformDispatcher.instance.onError = (error, stack) {
-        FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+        // FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
         return true;
       };
     }

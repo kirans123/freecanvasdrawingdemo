@@ -3,6 +3,8 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 // import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:login_demo/features/canvas_painter/strokewidth_slider.dart';
+// import 'package:path_provider/path_provider.dart';
+// import 'package:permission_handler/permission_handler.dart';
 
 class DrawingScreen extends StatefulWidget {
   const DrawingScreen({super.key});
@@ -78,7 +80,7 @@ class _DrawingScreenState extends State<DrawingScreen> {
     final byteData = await image.toByteData(format: ImageByteFormat.png);
     final pngBytes = byteData!.buffer.asUint8List();
 
-    /* if (Platform.isAndroid || Platform.isIOS) {
+    /*if (Platform.isAndroid || Platform.isIOS) {
       final status = await Permission.storage.request();
       if (status.isGranted) {
         final result = await ImageGallerySaver.saveImage(pngBytes,
