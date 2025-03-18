@@ -29,3 +29,8 @@ Features
     Implement using CustomPainter for rendering drawings.
     Code should follow best practices (clean architecture, modularization).
     The app should run on both Android and iOS.
+
+# Video Link
+
+1. Android - https://www.dropbox.com/scl/fi/wr35bek5hjbhh292zr93t/FreeHandCanvaDrawingAndroid.mov?rlkey=ihvl2l8f41aila7n4p8p19r9g&st=b7ng2i3x&dl=0
+2. iOS - https://www.dropbox.com/scl/fi/4dbydbghm4rxddh22h55h/FreeHandCanvaDrawingiOS.mov?rlkey=a6xebabum674r2c1v5zbtmenl&st=4qw8j6ly&dl=0
