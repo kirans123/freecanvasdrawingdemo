@@ -1,16 +1,31 @@
-# login_demo
+# FreeDrawing On Canva
 
-A new Flutter project.
+This is basic Flutter setup project.Below things are ready in this project
 
-## Getting Started
+- Project structure
+- Assets dependencies
+- Flavours in Android (Dev,Stg,Prod) - Android Side
+- Firebase setup - Android Side
+- Localization
+- Dio Setup
+- GetIt added
+- InitRepo and InitRepoImpl
+- InitService and InitServiceImpl
+- SharedPrefService and Impl
+- Firebase crashlytics error handler service and Impl
+- App info service and impl
+- Base url set to Dio using abstraction
+- Dark and light theme using ThemeExtension
 
-This project is a starting point for a Flutter application.
+Features
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Basic Drawing – Users should be able to sketch freehand lines on a canvas.
+2. Undo/Redo Functionality – Implement a way to undo and redo strokes.
+3. Colour Selection – Users should be able to choose different stroke colours.
+4. Stroke Thickness – Users can adjust the thickness of the stroke.
+5. Clear Canvas – A button to clear the entire sketch.
+6. Save to Image – Save the drawing as an image file in the device storage.
+    Use Flutter (latest stable version).
+    Implement using CustomPainter for rendering drawings.
+    Code should follow best practices (clean architecture, modularization).
+    The app should run on both Android and iOS.

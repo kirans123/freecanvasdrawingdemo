@@ -1,15 +1,14 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:login_demo/features/canvas_painter/strokewidth_slider.dart';
 // import 'package:image_gallery_saver/image_gallery_saver.dart';
-// import 'package:permission_handler/permission_handler.dart';
+import 'package:login_demo/features/canvas_painter/strokewidth_slider.dart';
 
 class DrawingScreen extends StatefulWidget {
   const DrawingScreen({super.key});
 
   @override
-  _DrawingScreenState createState() => _DrawingScreenState();
+  State<DrawingScreen> createState() => _DrawingScreenState();
 }
 
 class _DrawingScreenState extends State<DrawingScreen> {
@@ -79,36 +78,42 @@ class _DrawingScreenState extends State<DrawingScreen> {
     final byteData = await image.toByteData(format: ImageByteFormat.png);
     final pngBytes = byteData!.buffer.asUint8List();
 
-    // if (Platform.isAndroid || Platform.isIOS) {
-    //   final status = await Permission.storage.request();
-    //   if (status.isGranted) {
-    //     final result = await ImageGallerySaver.saveImage(pngBytes,
-    //         quality: 100,
-    //         name: 'drawing_${DateTime.now().millisecondsSinceEpoch}');
-    //     if (result != null) {
-    //       ScaffoldMessenger.of(context).showSnackBar(
-    //         const SnackBar(content: Text('Image saved to gallery')),
-    //       );
-    //     } else {
-    //       ScaffoldMessenger.of(context).showSnackBar(
-    //         const SnackBar(content: Text('Failed to save image')),
-    //       );
-    //     }
-    //   } else {
-    //     ScaffoldMessenger.of(context).showSnackBar(
-    //       const SnackBar(content: Text('Storage permission denied')),
-    //     );
-    //   }
-    // } else {
-    //   final directory = await getApplicationDocumentsDirectory();
-    //   const imagePath =
-    //       '<span class="math-inline">{directory.path}/drawing_</span>{DateTime.now().millisecondsSinceEpoch}.png';
-    //   final file = File(imagePath);
-    //   await file.writeAsBytes(pngBytes);
-    //   ScaffoldMessenger.of(context).showSnackBar(
-    //     const SnackBar(content: Text('Image saved to $imagePath')),
-    //   );
-    // }
+    /* if (Platform.isAndroid || Platform.isIOS) {
+      final status = await Permission.storage.request();
+      if (status.isGranted) {
+        final result = await ImageGallerySaver.saveImage(pngBytes,
+            quality: 100,
+            name: 'drawing_${DateTime.now().millisecondsSinceEpoch}');
+        if (result != null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Image saved to gallery')),
+          );
+        } else {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Failed to save image')),
+          );
+        }
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Storage permission denied')),
+        );
+      }
+    } else {
+      try {
+        final directory = await getApplicationDocumentsDirectory();
+        final imagePath =
+            '${directory.path}/drawing_${DateTime.now().millisecondsSinceEpoch}.png';
+        final file = File(imagePath);
+        await file.writeAsBytes(pngBytes);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Image saved to $imagePath')),
+        );
+      } catch (e) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Error saving image: $e')),
+        );
+      }
+    }*/
   }
 
   @override
